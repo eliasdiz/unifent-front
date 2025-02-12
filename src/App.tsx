@@ -1,16 +1,9 @@
-import { Button } from "@mui/material"
-
+import PokemonTable from "./Components/PokemonTable"
 
 const App = () => {
 	return (
-		<div className="h-[100vh] border border-red-500">
-			
-			<Button
-				variant="contained"
-				color="info"
-			>
-				sdfsdfsdf
-			</Button>
+		<div className="h-[100vh] flex justify-center items-center bg-[#2A4364]">
+			<PokemonTable />
 		</div>
 	)
 }
