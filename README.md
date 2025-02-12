@@ -1,50 +1,15 @@
-# React + TypeScript + Vite
+Debe utilizar el siguiente APIS de pokemones https://pokeapi.co/ con el cual deberá crear un front-end utilizando React, que tenga los siguientes requerimientos:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+1. Debe mostrar en la pantalla de inicio siempre una tabla con 10 Pokemons, en dicha tabla se debe mostrar:
+    a.Nombre del Pokemon
+    b.Imagen del Pokemon
+    c.Debe utilizar paginación para las siguientes búsquedas
+    d.Debe tener filtro por si se quiere buscar algún Pokemon especifico por nombre
+2. Si se da doble clic en la imagen del Pokemon, este deberá mostrar los siguientes datos del Pokemon:
+    a.Tipo de Pokemon
+    b.Peso
+    c.Habilidades del Pokemon
+3. Por último si se le da clic a la habilidad deberá mostrar los efectos que produce
+Ejemplo de consumo del API
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+https://pokeapi.co/api/v2/pokemon?offset=1&limit=200
